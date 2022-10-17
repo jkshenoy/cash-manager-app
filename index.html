@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cash Register</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Cash Register Manager</h1>
+      <p class="details">
+        Enter the bill amount and cash given by the customer and know the
+        balance amount/ number of notes to be returned.
+      </p>
+      <label class="input-label" for="bill-amount">Bill Amount:</label>
+      <input class="input" id="bill-amount" type="text" />
+      <label class="input-label" id="cash-label" for="paid-amount"
+        >Paid Amount:</label
+      >
+      <input class="input" id="paid-amount" type="text" />
+      <button id="check-btn">Check</button>
+      <p id="error-msg"></p>
+      <p id="return-msg"></p>
+      <table class="return-table">
+        <caption>
+          Return Denominations
+        </caption>
+        <tr>
+          <th># of Notes</th>
+          <td class="no-of-notes"></td>
+          <td class="no-of-notes"></td>
+          <td class="no-of-notes"></td>
+          <td class="no-of-notes"></td>
+          <td class="no-of-notes"></td>
+          <td class="no-of-notes"></td>
+          <td class="no-of-notes"></td>
+          <td class="no-of-notes"></td>
+        </tr>
+        <tr>
+          <th>Denominations</th>
+          <td>2000</td>
+          <td>&nbsp;500</td>
+          <td>&nbsp;200</td>
+          <td>&nbsp;100</td>
+          <td>&nbsp;20&nbsp;</td>
+          <td>&nbsp;10&nbsp;</td>
+          <td>&nbsp;&nbsp;5&nbsp;</td>
+          <td>&nbsp;&nbsp;1&nbsp;</td>
+        </tr>
+      </table>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
