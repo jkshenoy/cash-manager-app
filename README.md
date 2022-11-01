@@ -1,6 +1,6 @@
 # cash-manager-app
 
-Lets the user enter the bill amount and amount paid by customer in cash and displays number of denominations to be returned.
+Lets the user enter the bill amount and amount paid by customer in cash and displays number of denominations to be returned. Created as part of Neogcamp level zero Mark-10 challenge. https://neog.camp/guide/mark-15-checklist
 
 ## Techstack
 
