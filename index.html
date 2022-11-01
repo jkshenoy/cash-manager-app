@@ -9,19 +9,21 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <header>
+      <h1>Cash Register Manager</h1>
+      <!-- <p class="details">
+      Enter the bill amount and cash received from customer to know the minimum
+      number of notes to return
+    </p> -->
+    </header>
     <div class="container">
-      <h1 class="title">Cash Register Manager</h1>
-      <p class="details">
-        Enter the bill amount and cash given by the customer and know the
-        balance amount/ number of notes to be returned.
-      </p>
       <label class="input-label" for="bill-amount">Bill Amount:</label>
       <input class="input" id="bill-amount" type="text" />
       <label class="input-label" id="cash-label" for="paid-amount"
         >Paid Amount:</label
       >
       <input class="input" id="paid-amount" type="text" />
-      <button id="check-btn">Check</button>
+      <button id="check-btn">Calculate</button>
       <p id="error-msg"></p>
       <p id="return-msg"></p>
       <table class="return-table">
@@ -29,7 +31,7 @@
           Return Denominations
         </caption>
         <tr>
-          <th># of Notes</th>
+          <th>How many notes?</th>
           <td class="no-of-notes"></td>
           <td class="no-of-notes"></td>
           <td class="no-of-notes"></td>
@@ -52,6 +54,16 @@
         </tr>
       </table>
     </div>
+
+    <footer>
+      <p>
+        Made by
+        <a href="https://jkshenoy.netlify.app/" target="_blank">
+          Jayakrishna Shenoy</a
+        >
+        🧑🏽‍💻
+      </p>
+    </footer>
 
     <script src="app.js"></script>
   </body>
