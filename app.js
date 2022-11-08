@@ -39,28 +39,27 @@ function calculateChange(returnAmount) {
   }
 }
 
-// hideInput();
+hideInput();
 function validateAmount() {
   hideMessage();
   if (billAmount.value === '') showMessage('enter Bill Amount to proceed!');
   else {
-    if (isNaN(billAmount.value) || isNaN(paidAmount.value)) {
-      showMessage('Bill/Paid amount should be a number! Try again.. ');
-    } else {
-      if (billAmount.value > 0) {
-        showInput();
-        if (paidAmount.value >= billAmount.value) {
-          const amountToBeReturned = Math.trunc(
-            paidAmount.value - billAmount.value
-          );
-          calculateChange(amountToBeReturned);
-        } else if (paidAmount.value !== '')
-          showMessage(
-            'Insufficient amount! Customer should pay the complete bill.'
-          );
-        else if (paidAmount.value === '')
-          showMessage('enter Paid Amount to proceed.');
-      } else showMessage('Amount cannot be zero or negative!');
-    }
+    if (billAmount.value > 0) {
+      showInput();
+      if (paidAmount.value >= billAmount.value) {
+        const amountToBeReturned = Math.trunc(
+          paidAmount.value - billAmount.value
+        );
+        calculateChange(amountToBeReturned);
+      } else if (paidAmount.value !== '')
+        showMessage(
+          'Insufficient amount! Customer should pay the complete bill.'
+        );
+      else if (paidAmount.value === '')
+        showMessage('enter Paid Amount to proceed.');
+    } else
+      showMessage(
+        'Amount cannot be zero or negative. enter valid Bill Amount to proceed!'
+      );
   }
 }
